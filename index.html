@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink x Black Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Gallery 💖</h1>
+
+  <div class="filter-btns">
+    <button class="active" onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('aesthetic')">Aesthetic</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/400/300?random=1" class="nature" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/400/300?random=2" class="city" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/400/300?random=3" class="aesthetic" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/400/300?random=4" class="nature" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/400/300?random=5" class="city" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/400/300?random=6" class="aesthetic" onclick="openLightbox(this)">
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img">
+    <button class="prev" onclick="changeImg(-1)">&#10094;</button>
+    <button class="next" onclick="changeImg(1)">&#10095;</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
